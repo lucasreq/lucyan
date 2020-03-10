@@ -8,17 +8,21 @@ import ProductList from "./components/ProductList";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
 import Default from "./components/Default";
+import Modal from './components/Modal';
+import Home from "./components/Home";
 
 function App() {
   return (
     <React.Fragment>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={ProductList} />
+        <Route exact path="/" component={Home} />
         <Route path="/details" component={Details} />
         <Route path="/cart" component={Cart} />
+        <Route path="/products" component={ProductList} />
         <Route component={Default} />
       </Switch>
+      <Modal />
     </React.Fragment>
   );
 }
