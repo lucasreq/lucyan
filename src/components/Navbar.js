@@ -44,4 +44,9 @@ background:var(--mainBlue);
   font-size:1.3rem;
   text-transform:capitalize !important;
 }
+position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:30;
 `
