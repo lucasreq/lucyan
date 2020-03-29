@@ -34,16 +34,15 @@ class Data extends Component {
     const sacs = Object.keys(this.state.sac).map(key => {
       var tableaudemerde = {
         id: {key},
-        name: {this.state.sac[key].name},
-        description: {this.state.sac[key].description},
-        price: {this.state.sac[key].price},
-        like: {this.state.sac[key].like},
-        image: {this.state.sac[key].image}
+        name: this.state.sac[key].name,
+        description: this.state.sac[key].description,
+        price: this.state.sac[key].price,
+        like: this.state.sac[key].like,
+        image: this.state.sac[key].image
       }
+      storeProduct.push(tableaudemerde)
     })
-    return (
-      <div>{sacs}</div>
-    )
+    return storeProduct
   }
 }
 
