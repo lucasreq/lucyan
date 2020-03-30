@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../context";
 import PropTypes from "prop-types";
-import { ButtonContainer } from "./button";
+import { ButtonContainer } from "../components/button";
 
 export default class Home extends Component {
   render() {

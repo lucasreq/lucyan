@@ -4,12 +4,12 @@ import logo from "./img/logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
-import ProductList from "./components/ProductList";
-import Details from "./components/Details";
-import Cart from "./components/Cart";
-import Default from "./components/Default";
+import ProductList from "./pages/ProductList";
+import Details from "./pages/Details";
+import Cart from "./pages/Cart";
+import Default from "./pages/Default";
 import Modal from './components/Modal';
-import Home from "./components/Home";
+import Home from "./pages/Home";
 
 function App() {
   return (
