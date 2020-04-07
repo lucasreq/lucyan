@@ -18,8 +18,9 @@ export default function CartItem({item,value}) {
                 {price}
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <span className="d-ls-none">remove :</span>
-                <button onClick={()=>removeItem(id)}>delete</button>
+                <div className=" cart-icon" onClick={() => removeItem(id)}>
+                    <i className="fas fa-trash" />
+                </div>
             </div>
             <div className="col-10 mx-auto col-lg-2">
                 <span className="d-ls-none">total :</span>

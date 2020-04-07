@@ -31,24 +31,29 @@ const Login = ({ history }) => {
   }
 
   return (
-    <div className="Login">
-      <h1>Log in</h1>
+    <div className="Login col-md-6">
+      <h1 style={{textAlign: "center"}}>Log in</h1>
       <form onSubmit={handleLogin}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Log in</button>
+        <div className="form-group">
+          <label>
+            Email
+          </label>
+          <input name="email" type="email" placeholder="Email" className="form-control"/>
+        </div>
+        <div className="form-group">
+          <label>
+            Password
+          </label>  
+          <input name="password" type="password" placeholder="Password" className="form-control"/>
+        </div>
+        <button type="submit" className="btn btn-primary">Log in</button>
+        <Link to="/signup">
+          <button className="btn btn-success" style={{marginLeft:"25px"}}>
+            <span>Register</span>
+          </button>
+        </Link>
       </form>
-      <Link to="/signup">
-        <ButtonContainer>
-          <span>Register</span>
-        </ButtonContainer>
-      </Link>
+      
     </div>
   );
 };

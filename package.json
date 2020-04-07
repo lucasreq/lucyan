@@ -16,6 +16,7 @@
     "react-native": "^0.62.1",
     "react-native-quidpay-webview": "^1.0.0",
     "react-native-rave-webview": "^1.0.0",
+    "react-paypal-express-checkout": "^1.0.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "styled-components": "^5.0.1",

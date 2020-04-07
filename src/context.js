@@ -55,7 +55,7 @@ export default class ProductProvider extends Component {
         return { products: tempProducts, cart: [...this.state.cart, product] };
       },
       () => {
-        console.log(this.state);
+        this.addTotals();
       }
     );
   };
@@ -77,11 +77,43 @@ export default class ProductProvider extends Component {
     console.log("this is increment methode");
   };
   removeItem = id =>{
-    console.log("Removal")
+    let tempProducts = [...this.state.products];
+    let tempCart = [...this.state.cart];
+
+    tempCart = tempCart.filter(item => item.id !== id);
+
+    const index = tempProducts.indexOf(this.getItem(id));
+    let removedProduct = tempProducts[index];
+    removedProduct.inCart = false;
+    removedProduct.count = false;
+    removedProduct.total = false;
+
+    this.setState(()=>{
+      return {
+        cart:[...tempCart],
+        products:[...tempProducts]
+      }
+    },()=>{
+      this.addTotals();
+    })
   };
   clearCart = id =>{
-    console.log("cart cleared")
+    this.setState(()=>{
+      return{cart:[]};
+    },()=>{
+      this.setProducts();
+      this.addTotals();
+    });
   };
+  addTotals = () =>{
+    let subTotal = 0;
+    this.state.cart.map(item => (subTotal += item.total));
+    this.setState(()=>{
+      return {
+        cartSubTotal:subTotal
+      }
+    })
+  }
   render() {
     return (
       <ProductContext.Provider

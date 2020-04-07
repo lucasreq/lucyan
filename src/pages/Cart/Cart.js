@@ -8,6 +8,7 @@ import CartItem from './CartItem';
 import { Button } from 'react-bootstrap';
 import { ButtonContainer } from '../../components/button';
 import { Link } from 'react-router-dom';
+import CartTotals from './CartTotals'
 
 export default class Cart extends Component {
   render() {
@@ -22,11 +23,7 @@ export default class Cart extends Component {
                   <Title name="your" title="cart"/>
                   <CartColumns />
                   <CartList value={value}/>
-                  <Link to="/pay">
-                    <ButtonContainer>
-                      <span>Pay</span>
-                    </ButtonContainer>
-                  </Link>
+                  <CartTotals value={value} history={this.props.history}/>
                   
                 </React.Fragment>
               );

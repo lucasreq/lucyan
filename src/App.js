@@ -15,14 +15,13 @@ import User from "./auth/UserPage"
 import SignUp from "./auth/SignUp"
 import { AuthProvider } from "./auth/Auth"
 import PrivateRoute from "./auth/PrivateRoute"
-import Pay from "./pages/pay"
 
 function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <Switch>
-        <AuthProvider>
+      <AuthProvider>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
@@ -30,10 +29,9 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
           <PrivateRoute path="/user" component={User} />
-          <Route path="/pay" component={Pay} />
-          {/*<Route component={Default} />*/}
-        </AuthProvider>
-      </Switch>
+          <Route component={Default} />
+        </Switch>
+      </AuthProvider>
       <Modal />
     </React.Fragment>
   );
