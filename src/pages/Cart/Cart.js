@@ -4,10 +4,6 @@ import CartColumns from './CartColumns';
 import EmptyCart from './EmptyCart';
 import {ProductConsumer} from '../../context'
 import CartList from './CartList';
-import CartItem from './CartItem';
-import { Button } from 'react-bootstrap';
-import { ButtonContainer } from '../../components/button';
-import { Link } from 'react-router-dom';
 import CartTotals from './CartTotals'
 
 export default class Cart extends Component {
