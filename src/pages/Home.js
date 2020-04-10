@@ -1,69 +1,30 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
 
 export default class Home extends Component {
   render() {
     return (
-      <ContentHome className="col-9 mx-auto col-md-6 col-lg-auto my-auto">
-        <div className="jumbotron">
-          <h1 className="display-4 text-center">Lucyan</h1>
-          <p className="lead text-center">
-            This is a simple hero unit, a simple jumbotron-style component for
-            calling extra attention to featured content or information.
-          </p>
-          <hr className="my-4" />
-          <p className="text-center">
-            It uses utility classes for typography and spacing to space content
-            out within the larger container.
-          </p>
-          <hr />
-          <div className="card-group">
-            <ProductWrapper className="card">
-                <img src="img/plage.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">Sac de plage</h5>
-                    <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                    </p>
-                    <p className="card-text">
-                    <small className="text-muted">Last updated 3 mins ago</small>
-                    </p>
-                </div>
-            </ProductWrapper>
-            <ProductWrapper className="card">
-                <img src="img/ville.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">Sac de ville</h5>
-                    <p className="card-text">
-                    This card has supporting text below as a natural lead-in to
-                    additional content.
-                    </p>
-                    <p className="card-text">
-                    <small className="text-muted">Last updated 3 mins ago</small>
-                    </p>
-                </div>
-            </ProductWrapper>
-            <ProductWrapper className="card">
-                    <img src="img/pochette.jpg" className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Pochette soirée</h5>
-                        <p className="card-text">
-                        This is a wider card with supporting text below as a natural
-                        lead-in to additional content. This card has even longer
-                        content than the first to show that equal height action.
-                        </p>
-                        <p className="card-text">
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                        </p>
-                    </div>
-            </ProductWrapper>
-            
-          </div>
-        </div>
-
+      <ContentHome className="col-5 mx-auto col-md-6 col-lg-auto my-auto">
+        <Tabs defaultActiveKey="Notre atelier" id="uncontrolled-tab-example">
+          <Tab eventKey="Notre atelier" title="Notre atelier">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis tellus vitae massa finibus aliquet. Suspendisse faucibus, odio a eleifend suscipit, justo nunc tempor diam, id venenatis dui purus iaculis magna. Phasellus venenatis, dui eget finibus auctor, libero augue ornare sem, at tristique leo lorem ac turpis. Morbi efficitur scelerisque iaculis. Suspendisse eget sagittis turpis, vitae pulvinar ligula. Sed magna magna, convallis quis odio vitae, condimentum aliquam mi. Nullam turpis velit, interdum ut scelerisque et, suscipit sed nunc. Integer at semper risus, sed laoreet quam. In pulvinar lacinia ante ac imperdiet.</h3>
+            <h3>Proin enim turpis, ultricies at tempus vel, convallis ac lorem. Proin laoreet lectus sit amet volutpat pretium. Suspendisse cursus feugiat neque, at semper justo malesuada sit amet. Morbi erat elit, vestibulum nec metus at, imperdiet porta nunc. Sed molestie justo id nisi laoreet tempus. Phasellus feugiat sollicitudin accumsan. Cras at quam a ipsum tincidunt lacinia. Mauris sagittis interdum vehicula. Phasellus suscipit varius velit sit amet eleifend. Vestibulum tempor nunc accumsan quam tincidunt dictum. Curabitur ut diam pharetra, congue diam id, faucibus risus. Nulla euismod augue a purus gravida, elementum tempus felis sollicitudin. Ut in nunc rutrum, pretium tortor eu, laoreet mauris. Praesent aliquet consectetur est, eget gravida orci pulvinar vel.</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlLNsZdEWgxe8XtZRGVqj1cbHAM8JU71hCKW_4_Al9lsBen_dm&usqp=CAU" />
+          </Tab>
+          <Tab eventKey="Les sacs" title="Les sacs">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis tellus vitae massa finibus aliquet. Suspendisse faucibus, odio a eleifend suscipit, justo nunc tempor diam, id venenatis dui purus iaculis magna. Phasellus venenatis, dui eget finibus auctor, libero augue ornare sem, at tristique leo lorem ac turpis. Morbi efficitur scelerisque iaculis. Suspendisse eget sagittis turpis, vitae pulvinar ligula. Sed magna magna, convallis quis odio vitae, condimentum aliquam mi. Nullam turpis velit, interdum ut scelerisque et, suscipit sed nunc. Integer at semper risus, sed laoreet quam. In pulvinar lacinia ante ac imperdiet.</h3>
+            <h3>Proin enim turpis, ultricies at tempus vel, convallis ac lorem. Proin laoreet lectus sit amet volutpat pretium. Suspendisse cursus feugiat neque, at semper justo malesuada sit amet. Morbi erat elit, vestibulum nec metus at, imperdiet porta nunc. Sed molestie justo id nisi laoreet tempus. Phasellus feugiat sollicitudin accumsan. Cras at quam a ipsum tincidunt lacinia. Mauris sagittis interdum vehicula. Phasellus suscipit varius velit sit amet eleifend. Vestibulum tempor nunc accumsan quam tincidunt dictum. Curabitur ut diam pharetra, congue diam id, faucibus risus. Nulla euismod augue a purus gravida, elementum tempus felis sollicitudin. Ut in nunc rutrum, pretium tortor eu, laoreet mauris. Praesent aliquet consectetur est, eget gravida orci pulvinar vel.</h3>
+            <img src="https://www.tenuecomplete.com/42228-large_default/sac-de-plage-anses-en-corde-epaisse-100-coton-canvas-407-g-m.jpg"/>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/61V4%2BAqIJ9L._AC_UX385_.jpg"/>
+            <img src="https://images.fr.shopping.rakuten.com/photo/1220573073_ML.jpg"/>
+          </Tab>
+          <Tab eventKey="contact" title="Contact">
+            <h3>Vous pouvez nous contactez a l'addresse :</h3> <span>Lucyan@gmail.com</span>
+          </Tab>
+        </Tabs>
         {/* card footer */}
         <div className="card-footer d-flex justify-content-between">
           <p className="align-self-center mb-0">test</p>
@@ -87,6 +48,7 @@ Home.propTypes = {
   }).isRequired
 };
 const ContentHome = styled.div`
+
 .card {
     border-color: transparent;
     border: 0.04rem solid rgba(0, 0, 0, 0.2);

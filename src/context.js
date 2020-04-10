@@ -70,12 +70,6 @@ export default class ProductProvider extends Component {
       return { modalOpen: false };
     });
   };
-  increment = id => {
-    console.log("this is increment methode");
-  };
-  decrement = id => {
-    console.log("this is increment methode");
-  };
   removeItem = id =>{
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
@@ -123,8 +117,6 @@ export default class ProductProvider extends Component {
           addToCart: this.addToCart,
           openModal: this.openModal,
           closeModal: this.closeModal,
-          increment:this.increment,
-          decrement:this.decrement,
           removeItem:this.removeItem,
           clearCart:this.clearCart
         }}

@@ -38,6 +38,11 @@ export default class Navbar extends Component {
               Profile
             </Link>
           </li>
+          <li className="nav-item ml-5">
+            <Link to="/custom" className="nav-link">
+              Sac sur mesure
+            </Link>
+          </li>
         </ul>
       </NavWrapper>
     );
