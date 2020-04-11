@@ -1,7 +1,7 @@
 import {Form} from "react-bootstrap";
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import "emailjs";
+import Materials from "./Materials";
 
 export default class CustomBag extends Component {
   state = {
@@ -82,13 +82,7 @@ export default class CustomBag extends Component {
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlSelect2">
           <Form.Label>Matière de pendentif:</Form.Label>
-          <Form.Control as="select">
-            <option>Pendentif en larimar (Pierre locale)</option>
-            <option>Pendentif en argent</option>
-            <option>Pendentif en bois</option>
-            <option>Pendentif en ambre</option>
-            <option>Pendentif en fer</option>
-          </Form.Control>
+          <Materials />
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Description du sac voulu :</Form.Label>

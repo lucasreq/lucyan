@@ -15,7 +15,7 @@ import SignUp from "./auth/SignUp"
 import { AuthProvider } from "./auth/Auth"
 import PrivateRoute from "./auth/PrivateRoute"
 import BagForm from "./pages/BagForm";
-import { env } from './config';
+import {env} from "./config"
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
           <PrivateRoute path="/user" component={User} />
-          <PrivateRoute path="/Custom" component={BagForm}/>
+          <PrivateRoute path="/Custom" component={BagForm} env={env}/>
           <Route component={Default} />
         </Switch>
       </AuthProvider>

@@ -38,15 +38,6 @@ export default class Home extends Component {
   }
 }
 
-Home.propTypes = {
-  home: PropTypes.shape({
-    id: PropTypes.number,
-    img: PropTypes.string,
-    title: PropTypes.string,
-    price: PropTypes.number,
-    inCart: PropTypes.bool
-  }).isRequired
-};
 const ContentHome = styled.div`
 
 .card {

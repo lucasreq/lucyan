@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CustomBag from '../components/CustomBag';
-import PropTypes from 'prop-types';
 import {env} from '../config'
 
 export default class BagForm extends Component {
@@ -15,7 +14,3 @@ export default class BagForm extends Component {
         )
     }
 }
-
-BagForm.propTypes = {
-    env: PropTypes.object.isRequired
-  };
