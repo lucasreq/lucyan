@@ -38,7 +38,7 @@ function AdminPage() {
     <div>
       <Navbar bg = "dark" variant="dark">
         <Navbar.Brand href="#home">
-          wallah c un titre
+          Page ajout de sac
         </Navbar.Brand>
       </Navbar>
       <br></br>
@@ -46,13 +46,13 @@ function AdminPage() {
       <Container>
         <Row>
           <Col>
-            <h2>ADD NEW TASK</h2>
+            <h2>Ajouter un sac</h2>
 
             <Form>
               <Form.Group controlId = "formBasicCheckbox">
                 <Form.Control type="text" value={newTask} onChange={e =>setNewTask(e.target.value)}/>
               </Form.Group>
-              <Button variant="primary" onClick={onCreate}>Create Task</Button>
+              <Button variant="primary" onClick={onCreate}>Ajouter Sac</Button>
             </Form>
           </Col>
         </Row>
@@ -65,8 +65,8 @@ function AdminPage() {
                 <tr>
                   <th>ID</th>
                   <th>Name</th>
-                  <th>Delete Task</th>
-                  <th>Update Task</th>
+                  <th>Supprimer un sac</th>
+                  <th>Modifier un sac</th>
                 </tr>
               </thead>
               <tbody>
