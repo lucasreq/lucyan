@@ -10,8 +10,7 @@ body{
   font-family: 'Caladea', serif !important;
   background: var(--mainWhite) !important;
   color:var(--mainDark) !important;
-  padding-top: 5%;
-  margin:30%;
+  padding-top: 8%;
 }
 .text-title{
   font-family: 'Roboto Condensed', sans-serif;

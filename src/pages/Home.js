@@ -7,7 +7,7 @@ import Tab from 'react-bootstrap/Tab';
 export default class Home extends Component {
   render() {
     return (
-      <ContentHome className="col-5 mx-auto col-md-6 col-lg-auto my-auto">
+      <ContentHome className="col-5 mx-auto col-md-6 col-lg-auto my-auto blockquote">
         <Tabs defaultActiveKey="Notre atelier" id="uncontrolled-tab-example">
           <Tab eventKey="Notre atelier" title="Notre atelier">
             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis tellus vitae massa finibus aliquet. Suspendisse faucibus, odio a eleifend suscipit, justo nunc tempor diam, id venenatis dui purus iaculis magna. Phasellus venenatis, dui eget finibus auctor, libero augue ornare sem, at tristique leo lorem ac turpis. Morbi efficitur scelerisque iaculis. Suspendisse eget sagittis turpis, vitae pulvinar ligula. Sed magna magna, convallis quis odio vitae, condimentum aliquam mi. Nullam turpis velit, interdum ut scelerisque et, suscipit sed nunc. Integer at semper risus, sed laoreet quam. In pulvinar lacinia ante ac imperdiet.</h3>
