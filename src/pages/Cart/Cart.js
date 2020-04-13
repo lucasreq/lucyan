@@ -1,10 +1,4 @@
-import React, { Component } from 'react'
-import Title from '../../components/Title';
-import CartColumns from './CartColumns';
-import EmptyCart from './EmptyCart';
-import {ProductConsumer} from '../../context';
-import CartList from './CartList';
-import CartTotals from './CartTotals'
+import React from 'react'
 import viewCart from '../../functions'
 
 
