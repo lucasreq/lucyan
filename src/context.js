@@ -59,6 +59,8 @@ export default class ProductProvider extends Component {
       }
     );
   };
+
+
   openModal = id => {
     const product = this.getItem(id);
     this.setState(() => {
