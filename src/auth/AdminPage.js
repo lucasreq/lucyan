@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from "../firebase";
 import {Button,Row,Container,Col,Form,Navbar,Table} from 'react-bootstrap';
+import ImageUpload from './ImageUpload';
 
 function AdminPage() {
   const [tasks, setTasks] = React.useState([]);
@@ -83,6 +84,7 @@ function AdminPage() {
                   <th>Name</th>
                   <th> </th>
                   <th>Image</th>
+                  <th></th>
                   <th>Price</th>
                   <th> </th>
                   <th>Description</th>
@@ -98,6 +100,7 @@ function AdminPage() {
                       <Button className="text-white ml-4" variant="warning" onClick={() => onNameUpdate(spell.id)}>update</Button>
                     </td>
                     <td><img src={spell.img} width='100px'/></td>
+                    <td><ImageUpload/></td>
                     <td><input type="text"  className=" " placeholder={spell.price} onChange={e => setUpdatePrice(e.target.value)}></input></td>
                     <td>
                       <Button className="text-white ml-4" variant="warning" onClick={() => onPriceUpdate(spell.id)}>update</Button>
