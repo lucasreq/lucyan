@@ -23,6 +23,8 @@ export function addToCart(id) {
             }
             else{
                 cart.push(id)
+                console.log(cart)
+                return cart 
             }
         })
     }

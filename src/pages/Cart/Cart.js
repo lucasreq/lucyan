@@ -7,27 +7,16 @@ import CartList from './CartList';
 import CartTotals from './CartTotals'
 import viewCart from '../../functions'
 
+
+let cart = viewCart()
+
+
 export default function Cart() {
 
-    let cart = viewCart()
-    
     return (
-      <section>
-        {value => {
-          const {cart} = value;
-          if(cart.length>0){
-            return(
-             <div>
-
-             </div>
-            );
-          }
-          else {
-            return (
-              <EmptyCart />
-            )
-          }
-        }}
-      </section>
-    )
-  }
+      <div>
+          {cart.map(spell =>{
+            console.log(spell)
+          })}
+      </div>
+    )}
