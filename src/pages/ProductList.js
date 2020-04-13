@@ -3,6 +3,7 @@ import React from 'react';
 import '../App.css';
 import firebase from "../firebase";
 
+import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
@@ -13,6 +14,36 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import Modal from 'react-bootstrap/Modal';
+
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -21,6 +52,7 @@ const useStyles = makeStyles({
 
 export default function ProductList() {
   const [sacs, setSacs] = React.useState([]);
+  const [modalShow, setModalShow] = React.useState(false);
   const classes = useStyles();
 
   React.useEffect(() => {
@@ -58,7 +90,7 @@ export default function ProductList() {
           <div key ={spell.id} className="col-9 mx-auto col-md-6 col-lg-3 my-3">
             <div className="card">
               <Card className={classes.root}>
-                <CardActionArea>
+                <CardActionArea onClick={() => setModalShow(true)}>
                   <CardMedia
                   component="img"
                   alt="sac"
@@ -77,7 +109,7 @@ export default function ProductList() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" onClick={() => setModalShow(true)}>
                       voir plus
                     </Button>
                     <Button size="small" color="primary" onClick={liked}>
@@ -87,11 +119,20 @@ export default function ProductList() {
                       <p>{spell.likes}</p>
                     </Button>
                 </CardActions>
+                <MyVerticallyCenteredModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+              />
               </Card>
             </div>
           </div>
           ))}
         </div>
+
+        <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
       </Container>
         
         );
